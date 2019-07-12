@@ -2,11 +2,26 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0;
+    align-items: center;
 }
 h1{
     text-align: center;
+    margin-bottom: 0;
 }
 h3{
     text-align: center;
-    margin-top: 0;
+    margin-bottom: 0;
+}
+canvas{
+    height: 512px;
+    width: 288px;
+    box-align: center; 
+    margin: 0;
+    display: flex;
+}
+.score{
+    background-color: rgb(36, 18, 194);
+    height: 20px;
+    width: 60px;
+    z-index: 1;
 }
