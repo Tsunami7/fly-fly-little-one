@@ -1,0 +1,26 @@
+{
+  "name": "fly-fly-little-one",
+  "version": "1.0.0",
+  "description": "keep the bird flying else game over",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js",
+    "fix-all": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsunami7/fly-fly-little-one.git"
+  },
+  "author": "Alexander Barbaran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsunami7/fly-fly-little-one/issues"
+  },
+  "homepage": "https://github.com/Tsunami7/fly-fly-little-one#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0"
+  }
+}
