@@ -30,7 +30,7 @@ song.src = 'sounds/attack_on_titan.mp3';
 // -55 will help it climb 55 px up need to fix it to lower number possibly
 // num has been abjusted down to 40
 function flyUp() {
-  littleOneY -= 50;
+  littleOneY -= 45;
 }
 document.addEventListener('click', flyUp);
 document.addEventListener('keydown', (evt) => {
@@ -53,7 +53,7 @@ function pipeLoop() {
     ctx.drawImage(topPipe, pipes[i].x, pipes[i].y);
     ctx.drawImage(botPipe, pipes[i].x, pipes[i].y + gapAndTopPipe);
     // this will make the pipes move from right to left simple pipe.x iteration at speed of 2
-    pipes[i].x -= 1;
+    pipes[i].x -= 2;
     // will randomize the pipes y position will only work
     // 70 will be the space between pipes when they are generated in x axis
     if (pipes[i].x == 70) {
