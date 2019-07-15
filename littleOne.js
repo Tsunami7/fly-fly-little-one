@@ -53,7 +53,7 @@ function pipeLoop() {
     ctx.drawImage(topPipe, pipes[i].x, pipes[i].y);
     ctx.drawImage(botPipe, pipes[i].x, pipes[i].y + gapAndTopPipe);
     // this will make the pipes move from right to left simple pipe.x iteration at speed of 2
-    pipes[i].x -= 1.5;
+    pipes[i].x -= 1;
     // will randomize the pipes y position will only work
     // 70 will be the space between pipes when they are generated in x axis
     if (pipes[i].x == 70) {
