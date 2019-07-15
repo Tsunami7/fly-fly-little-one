@@ -4,13 +4,16 @@ body{
     margin: 0;
     align-items: center;
 }
-h1{
+h1, h3{
     text-align: center;
+    margin-top: 0;
     margin-bottom: 0;
 }
-h3{
-    text-align: center;
-    margin-bottom: 0;
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 canvas{
     height: 512px;
@@ -19,9 +22,49 @@ canvas{
     margin: 0;
     display: flex;
 }
-.score{
-    background-color: rgb(36, 18, 194);
-    height: 20px;
-    width: 60px;
-    z-index: 1;
-}
+@keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  .title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 22px;
+  }
+  .title2{
+      text-transform: uppercase;
+  }
+  .button {
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+    /* animation */
+    animation: 2s linear infinite blink;
+    align-content: center;
+    position: absolute;
+    top: 75%;
+  }
+  .littleOne{
+      position: absolute;
+      top: 47%;
+  }
+  p{
+      position: absolute;
+      top: 49%;
+      font-size: 1.4rem;
+  }
+  ul{
+      padding: 0;
+      position: absolute;
+      top: 55%;
+      list-style-type: none;
+      /* left: 0%; */
+      text-align: center;
+  }
+  
