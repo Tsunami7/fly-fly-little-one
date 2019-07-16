@@ -3,7 +3,6 @@
 
 ### instructions:
 - Avoid all the pipes
-
 - by pressing ![](https://res.cloudinary.com/dwm4qjpin/image/upload/c_limit,w_90/v1563227154/space-bar-png-7_ezjv6n.png) or tab ![](https://res.cloudinary.com/dwm4qjpin/image/upload/c_scale,w_58/v1563228249/touch_touching_touch_screen_touchpad-512_zowmro.png) to make the bird fly. 
 
 - avoid all Pipes. failure to do so, will End the Game.
