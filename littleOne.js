@@ -16,13 +16,16 @@ floor.src = 'images/fg.png';
 const song = new Audio();
 song.src = 'sounds/attack_on_titan.mp3';
 
+let littleOneY = 200;
+const littleOneX = 130;
+
 function flyUp() {
   littleOneY -= 30;
 }
 document.addEventListener('click', flyUp);
 document.addEventListener('keydown', (evt) => {
   const keycode = evt.keyCode;
-  if (keycode == 32) {
+  if (keycode === 32) {
     flyUp();
   }
 });
@@ -35,13 +38,13 @@ function pipeLoop() {
     ctx.drawImage(topPipe, pipes[i].x, pipes[i].y);
     ctx.drawImage(botPipe, pipes[i].x, pipes[i].y + gapAndTopPipe);
     pipes[i].x -= 2;
-    if (pipes[i].x == 70) {
+    if (pipes[i].x === 70) {
       pipes.push({ x: canvas.width, y: Math.floor(Math.random() * topPipe.height) - topPipe.height });
     }
     if ((littleOneY + littleOne.height >= canvas.height - floor.height) || (littleOneX + littleOne.width >= pipes[i].x && littleOneX <= pipes[i].x + topPipe.width) && (littleOneY <= pipes[i].y + topPipe.height || littleOneY + littleOne.height >= pipes[i].y + gapAndTopPipe)) {
       gameOver();
     }
-    if (pipes[i].x == 110) {
+    if (pipes[i].x === 110) {
       scoreCounter++;
     }
   }
@@ -55,20 +58,18 @@ function score() {
   ctx.fillstyle = '#fff';
 }
 function gameOver() {
-  song.volume = 0
-  if (window.confirm(`Game Over\n Your Score\n ${scoreCounter}`)) {
+  song.volume = 0;
+  if (window.confirm(`                               **-- Game Over --**\n                       In Loving Memory of Darksouls\n                              Indeed this was cancer!\n\n                                    Your Score: ${scoreCounter}\n\nhit 'OK' to play again if not hit 'Cancel' to go back to main screen`)) {
     location.reload();
   }
   window.location.href = 'index.html';
 }
 
-let littleOneY = 200;
-let littleOneX = 130;
 
 function draw() {
   littleOneY += 2;
   song.play();
-  song.volume = .2;
+  song.volume = 0.2;
   ctx.drawImage(backgroundImage, 0, 0);
   ctx.drawImage(littleOne, littleOneX, littleOneY);
   pipeLoop();
@@ -76,4 +77,5 @@ function draw() {
   score();
   window.requestAnimationFrame(draw);
 }
+
 draw();
